@@ -14,7 +14,7 @@ from nltk.tokenize import sent_tokenize
 
 nltk.download('punkt')
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDDz3AVV3kuFo94tWbKUnbSU1b9E5bOowk"
+os.environ["GOOGLE_API_KEY"] = "YOUR_GOOGLE_API_KEY"
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 from google.colab import files
@@ -90,3 +90,4 @@ for question in sample_questions:
     print("Question:", question)
     answer = ask_gemini(question)
     print("Answer:\n", textwrap.fill(answer))
+
